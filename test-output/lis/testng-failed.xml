@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [lis]">
+  <listeners>
+    <listener class-name="capturing_screenshot_using_listner.Listerner"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="capturing_screenshot_using_listner.Example">
+        <methods>
+          <include name="m1"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- capturing_screenshot_using_listner.Example -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [lis] -->

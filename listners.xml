@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="lis">
+	<listeners>
+		<listener
+			class-name="capturing_screenshot_using_listner.Listerner" />
+	</listeners>
+	<test name="Test" thread-count="1">
+		<classes>
+			<class name="capturing_screenshot_using_listner.Example" />
+		</classes>
+
+	</test>
+</suite> 

@@ -1,3 +1,4 @@
+
 package programming;
 
 public class Factorial_numbers 
@@ -14,7 +15,8 @@ public class Factorial_numbers
 
 	public static void main(String[] args) 
 	{
-		factorial(5);
+		factorial(5
+				);
 	}
 
 }

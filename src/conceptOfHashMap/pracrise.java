@@ -1,6 +1,9 @@
 package conceptOfHashMap;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class pracrise {
 
@@ -13,8 +16,12 @@ public class pracrise {
 		map.put("gore", 4);
 
 
-		
-		
+		//System.out.println(map);
+		Set<Entry<String,Integer>>ma=map.entrySet();
+		for(Entry<String,Integer>s:ma)
+		{
+			System.out.println(s);
+		}
 
 	}
 

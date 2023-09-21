@@ -14,6 +14,7 @@ public class Searching_in_Collection {
 		s.add(10);
 		s.add(20);
 		s.add(30);
+		
 		System.out.println("before searching"+s);
 		Collections.sort(s);
 		System.out.println("after searching"+s);

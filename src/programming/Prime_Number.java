@@ -28,7 +28,7 @@ public class Prime_Number
 		System.out.println("10 isprime number "+isprime(10));
 		System.out.println("1 isprime number "+isprime(1));
 		System.out.println("0 isprime number "+isprime(0));*/
-		System.out.println("2 isprime number "+isprime(2));
+		System.out.println("10 isprime number "+isprime(10));
 	}
 
 }

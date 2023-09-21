@@ -1,40 +1,53 @@
 package codes;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
+import java.util.Map.Entry;
 import java.util.Set;
 
-public class pra 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public   class pra 
 
 {
 	public static void main(String [] args)
 	{
-		int [] a={10,20,30,40,50,8,2};
-		int largest=a[0];
-		int smallest=a[0];
-		int seocndsmallest=a[0];
-		for(int i=0;i<a.length;i++)
+		try
 		{
-			if(a[i]>largest)
-			{
-				largest=a[i];
-			}
-			else if(a[i]<smallest)
-			{
-				smallest=a[i];
-			}
-			else if(a[i]>smallest && a[i]<smallest)
-			{
-				seocndsmallest=a[i];
-			}
+			int a=10/0;
 		}
-		System.out.println(largest);
-		System.out.println(smallest);
-		System.out.println(seocndsmallest);
-	}	
-	
+		
+		catch(Exception r)
+		{
+			System.out.println("exception parent");
+		}
+		catch(ArithmeticException e)
+		{
+			System.out.println("aritmmetic exception");
+		}
 	}
+	
+}
+	 
+
+
+		
+	
+	
+		
+	
 	

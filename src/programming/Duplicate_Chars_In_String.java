@@ -11,7 +11,7 @@ public class Duplicate_Chars_In_String {
 	{
 		String s="pravinaa";
 		char[] chars=s.toCharArray();	
-		/*int count = 0;
+		int count = 0;
 		for(int i=0;i<chars.length;i++)
 		{
 			for(int j=i+1;j<chars.length;j++)
@@ -25,17 +25,17 @@ public class Duplicate_Chars_In_String {
 				}
 			}
 		}
-		System.out.println(count);*/
-		Set set= new HashSet();
-		for(char s1:chars)
-		{
-			if(set.add(s1)==false)
-			{
-				System.out.println("duplicate char is"+ s1);
-			}
-			
-		}
-
+		System.out.println(count);
+//		Set set= new HashSet();
+//		for(char s1:chars)
+//		{
+//			if(set.add(s1)==false)
+//			{
+//				System.out.println("duplicate char is"+ s1);
+//			}
+//			
+//		}
+//
 
 	}
 }

@@ -2,10 +2,15 @@ package programming;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.util.SystemOutLogger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,34 +23,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Practise
 {
-	public static void main(String[] args) 
+	
+	
+	public static void main(String [] args)
 	{
-		
-	StringBuffer aplha= new StringBuffer(),numeric=new StringBuffer(),specail= new StringBuffer();
-	String s="pravin2106!@#$%^&*";
-	char[] ch=s.toCharArray();
-	for(int i=0;i<ch.length;i++)
-	{
-		char c=s.charAt(i);
-		if(Character.isAlphabetic(c))
-		{
-			aplha.append(c);
-		}
-		else if(Character.isDigit(c))
-		{
-		
-			numeric.append(c);
-		}
-		else
-		{
-			specail.append(c);
-		}
+		StringBuffer alpha=new StringBuffer(),numeric=new StringBuffer(),Specialchar=new StringBuffer();
+		String s="pravinkumar985624135@#$^%*&(pravin465465";
+		for()
 	}
-		
-		System.out.println("aplha :"+ aplha);
-		System.out.println("numeric:"+ numeric);
-		System.out.println("specail:"+ specail);
-		
-	}
+	
 }
 

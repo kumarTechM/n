@@ -4,7 +4,7 @@ public class consecutiveRepaetingCharacterInString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		getString("aasssfmfkfff");
+		getString("123123");
 	}
 	public static void getString(String s)
 	{

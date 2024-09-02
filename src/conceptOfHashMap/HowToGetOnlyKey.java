@@ -18,12 +18,15 @@ HashMap<String,Integer> map= new HashMap<String,Integer>();
 		map.put("sarkate", 2);
 		map.put("ashihs", 3);
 		map.put("gore", 4);
+		
 		System.out.println(map);
+		
 		Collection<Integer> value=map.values();
 		for(Integer val:value)
 		{
 			System.out.println("getting value only:"+val);
 		}
+	
 		Set<String> keyset=map.keySet();
 		for (String string : keyset) 
 		{

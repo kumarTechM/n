@@ -21,10 +21,10 @@ public class ReverseSentenceAndEachString
 			{
 				System.out.print(s1[i].charAt(j));
 			}
-			System.err.print(" ");
+			System.out.print(" ");
 		}
 		System.out.print
-		(" ");
+		("");
 
 }
 

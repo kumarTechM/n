@@ -16,6 +16,7 @@ public class Retrive_value_usingKey
 		map.put("gore", 4);
 		 //Retrieving a value associated with key 'TWO'
 		System.out.println(map.get("pravin"));
+		
 
 	}
 

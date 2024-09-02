@@ -27,9 +27,19 @@ public class Practise
 	
 	public static void main(String [] args)
 	{
-		StringBuffer alpha=new StringBuffer(),numeric=new StringBuffer(),Specialchar=new StringBuffer();
-		String s="pravinkumar985624135@#$^%*&(pravin465465";
-		for()
+		 String x="a2b3r4t1";
+	      String [] letters=x.split("[0-9]");
+	      String [] numbers=x.split("[a-z]+");
+	      int num[]=new int[numbers.length];
+	      int k=0;
+	      for(int i=0;i<numbers.length;i++)
+	      {
+	          if(!numbers.equals(""))
+	          {
+	              num[k]=Integer.parseInt(numbers[i]);
+	              k++;
+	          }
+	      }
 	}
 	
 }

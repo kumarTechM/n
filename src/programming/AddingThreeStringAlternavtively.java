@@ -1,6 +1,6 @@
 package programming;
 
-public class AddingTwoStringAlternavtively {
+public class AddingThreeStringAlternavtively {
 
 	public static void main(String[] args) 
 	{

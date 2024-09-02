@@ -1,10 +1,8 @@
 package conceptOfHashMap;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map.Entry;
-import java.util.Set;
 
+import java.util.*;
+import java.util.Map.Entry;
 public class AddingKey_ValuePairTo_HashMap 
 {
 /*

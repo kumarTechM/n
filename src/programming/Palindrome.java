@@ -17,7 +17,7 @@ public class Palindrome
 
 	public static void main(String[] args)
 	{
-		getPalindromeNumber(151);
+		getPalindromeNumber(12345);
 
 	}
 

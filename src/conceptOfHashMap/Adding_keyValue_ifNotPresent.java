@@ -7,6 +7,11 @@ import java.util.Set;
 public class Adding_keyValue_ifNotPresent 
 {
 	//How do you add given key-value pair to HashMap if and only if it is not present in the HashMap?
+	/* In HashMap duplicate key is not allowed but still you provide(will not get ce) it will override exiting key value and gives latest value
+	 * Only one null value allowed but if you provide multiple(will not get ce) null-value then it will override exiting value with new value
+	 * 
+	 * 
+	 */
 
 	public static void main(String[] args) 
 	{
@@ -15,6 +20,7 @@ public class Adding_keyValue_ifNotPresent
 		map.put("sarkate", 2);
 		map.put("ashihs", 3);
 		map.put("gore", 4);
+		
 		
 		System.out.println("size of map"+map.size());
 		System.out.println("before adding any value"+map.entrySet());

@@ -22,4 +22,19 @@ public class consecutiveRepaetingCharacterInString {
 		}
 		
 	}
+	// alternative soltion  but it won't give you o/p like -->a2b2c3 it give in form of array{a=2,b=2,c=3}
+	 char [] ch=s.toCharArray();
+	      HashMap<Character,Integer>map=new HashMap<Character,Integer>();
+	      for(char c:ch)
+	      {
+	          if(map.containsKey(c))
+	          {
+	              map.put(c,map.get(c)+1);
+	          }
+	          else 
+	          {
+	              map.put(c,1);
+	          }
+	      }
+	      System.out.println(map);
 }

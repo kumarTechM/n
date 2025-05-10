@@ -37,4 +37,14 @@ public class consecutiveRepaetingCharacterInString {
 	          }
 	      }
 	      System.out.println(map);
+// to get in consecutive manner try following way 
+ StringBuilder result = new StringBuilder();
+
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            if (entry.getValue() != 1) {  // Skip entries with value 1
+                result.append(entry.getKey()).append(entry.getValue());
+            }
+        }
+
+        System.out.println(result.toString());  // Output: a3b3v3
 }

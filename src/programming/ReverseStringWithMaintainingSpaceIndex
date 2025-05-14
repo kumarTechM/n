@@ -1,0 +1,38 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+  
+ 
+    public static void main(String[] args) 
+    {
+        String s="i am boy";
+        StringBuffer letters=new StringBuffer();
+        //// Collect non-space characters
+       for(char c:s.toCharArray())
+       {
+           if(c!=' ')
+           {
+               letters.append(c);
+           }
+       }
+       System.out.println(letters);
+        letters.reverse(); // Reverse the collected characters
+        System.out.println(letters);
+        StringBuffer result=new StringBuffer();
+        int index=0;
+        // Rebuild the result with spaces in original positions
+         for(char c:s.toCharArray())
+       {
+           if(c==' ')
+           {
+               result.append(c);
+           }
+           else
+           {
+               result.append(letters.charAt(index++));
+           }
+       }
+       System.out.println(result);
+    }
+}

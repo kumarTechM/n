@@ -1,0 +1,30 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+ class Main {
+    // form given array compare with num value and if it is less than num then add to left side and if greater then add to right side
+    public static void main(String[] args) {
+      int[] a = {20, 99, 5, 6, 11, 75, 78};
+        int num = 10;
+/// ouput will be result=[5, 6, 10, 20, 99, 11, 75, 78]
+        List leftarray=new ArrayList();
+        List rightarray=new ArrayList();
+        for(int b:a)
+        {
+            if(b<num)
+            {
+                leftarray.add(b);
+                
+            }
+            else
+            {
+                rightarray.add(b);
+            }
+        }
+        List result=new ArrayList();
+        result.addAll(leftarray);
+        result.add(num);
+        result.addAll(rightarray);
+        System.out.println(result);
+    }
+}

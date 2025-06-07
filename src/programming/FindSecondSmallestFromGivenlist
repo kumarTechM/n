@@ -1,0 +1,28 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) 
+    {
+           List<Integer> li = Arrays.asList(20, 67, 34,37);
+           int first=li.get(0);
+           int second=li.get(0);
+           for(int i=0;i<li.size();i++)
+           {
+               if(li.get(i)>first)
+               {
+                  second=first;
+                   first=li.get(i);
+                   
+               }
+               else if(li.get(i)>second && li.get(i)!=first)
+               {
+                   second=li.get(i);
+               }
+               
+           }
+           System.out.println(second);// 37
+           System.out.println(first);//67
+           
+    } 
+}

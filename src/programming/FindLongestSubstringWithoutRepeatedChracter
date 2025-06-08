@@ -1,0 +1,27 @@
+public class LongestSubstringBuiltIn {
+    public static void main(String[] args) {
+        String s = "aabbecchjjklm";
+        String longest = "";
+        String current = "";
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+
+            // If current substring already contains the character
+            if (current.contains(String.valueOf(ch))) {
+                // Remove everything up to and including the repeated character
+                int index = current.indexOf(ch);
+                current = current.substring(index + 1);
+            }
+
+            current += ch;
+
+            // Update longest if current is longer
+            if (current.length() > longest.length()) {
+                longest = current;
+            }
+        }
+
+        System.out.println("Longest substring without repeating characters: " + longest);//klm
+    }
+}

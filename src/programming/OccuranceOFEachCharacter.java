@@ -28,7 +28,16 @@ public class OccuranceOFEachCharacter {
 		System.out.println(s+" : "+map);
 		
 		
-		
+		now check blow code
+			 StringBuffer sb = new StringBuffer();
+        Set<Entry<Character, Integer>> set = map.entrySet();
+        for (Entry<Character, Integer> jk : set) {
+            if (jk.getValue() > 1) {  // ✅ Only add repeating characters
+                sb.append(jk.getKey()).append(jk.getValue());
+            }
+        }
+
+        System.out.println(sb.toString());  // ✅ o/p wil be a2b2s2x2i2
 		
 		
 

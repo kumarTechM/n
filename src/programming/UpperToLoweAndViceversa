@@ -1,0 +1,32 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+
+     String s="HexAwarE"; // o/p will be s=hEXaWARe
+     StringBuffer sb=new StringBuffer();
+     
+     for(char c:s.toCharArray())
+     {
+         if(Character.isLowerCase(c))
+         {
+             sb.append(Character.toUpperCase(c));
+         }
+         else if(Character.isUpperCase(c))
+         {
+             sb.append(Character.toLowerCase(c));
+         }
+         else
+         {
+             sb.append(c);
+         }
+     }
+     System.out.println(sb);
+    
+    }
+}

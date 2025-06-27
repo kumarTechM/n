@@ -1,0 +1,29 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+        String s="ttesst@innn123ggg";
+       HashMap<Character,Integer>map=new HashMap<Character,Integer>();
+       for(char c:s.toCharArray())
+       {
+           if(map.containsKey(c))
+           {
+               map.put(c,map.get(c)+1);
+           }
+           else
+           {
+               map.put(c,1);
+           }
+       }
+       System.out.println(map);
+       
+       
+    }
+}
+o/p
+{@=1, 1=1, 2=1, s=2, 3=1, t=3, e=1, g=3, i=1, n=3}

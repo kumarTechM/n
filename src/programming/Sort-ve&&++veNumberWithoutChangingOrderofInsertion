@@ -1,0 +1,33 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+// here we need to push all -ve to left but order of -ve number shouldn't change 
+    int [] num={1,-1,3,-2,-3,5,6,-7};
+// op will be [-1, -2, -3, -7, 1, 3, 5, 6]// no order is change 
+    List neve=new ArrayList();
+    List pove=new ArrayList();
+    for(int j:num)
+    {
+        if(j<0)
+        {
+            neve.add(j);
+        }
+        else
+        {
+            pove.add(j);
+        }
+    }
+  
+      List result=new ArrayList();
+      result.addAll(neve);
+      result.addAll(pove);
+      System.out.println(result);
+    
+    }
+}

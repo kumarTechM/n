@@ -1,0 +1,48 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+        int num[]={1,2,4,6,7,9};// missing number is 3,5,8
+        int n=9;// maximum number is 9
+        Set set=new HashSet();
+        for(int a:num)
+        {
+            set.add(a);
+        }
+        for(int i=1;i<=9;i++)
+        {
+            if(!set.contains(i))
+            {
+                System.out.println("Missing Number is "+i);
+            }
+        }
+        
+       
+       
+    }
+}//
+
+// for 2 missing numbers
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 4, 6, 7}; // missing numbers: 3, 5
+        int n = 7; // full range is 1 to 7
+
+        Set<Integer> set = new HashSet<>();
+        for (int num : arr) {
+            set.add(num);
+        }
+
+        System.out.print("Missing numbers: ");
+        for (int i = 1; i <= n; i++) {
+            if (!set.contains(i)) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}

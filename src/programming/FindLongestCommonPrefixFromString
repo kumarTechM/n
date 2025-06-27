@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        String s = "pravin praveen pravesh";
+        String[] words = s.split(" ");
+
+        String prefix = words[0];
+
+        for (String word : words) {
+            while (!word.startsWith(prefix)) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+                if (prefix.isEmpty()) break;
+            }
+        }
+
+        System.out.println("Longest Common Prefix: " + prefix);
+    }
+}
+Longest Common Prefix: prav

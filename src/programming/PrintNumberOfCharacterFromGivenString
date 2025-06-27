@@ -21,6 +21,11 @@ class Main {
            }
        }
        System.out.println(map);
+       Set<Entry<Character,Integer>>n=map.entrySet();
+       for(Entry<Character,Integer>z:n)
+       {
+           System.out.println(z.getKey()+" "+z.getValue());
+       }
        
        
     }

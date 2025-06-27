@@ -1,0 +1,26 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+        int[] arr = {10, 5, 20, 8, 15, 20, 25, 5};
+     Arrays.sort(arr);
+     System.out.println("sorted array is"+Arrays.toString(arr));
+     System.out.println(arr[arr.length-3]);
+    
+    
+    //  //another way with duplicates removed
+    //  int[] arr = {10, 5, 20, 8, 15, 20, 25, 5};
+    // // Use TreeSet to remove duplicates and sort
+    //     TreeSet<Integer> set = new TreeSet<>();
+    //     for (int num : arr) set.add(num);
+    //   List<Integer> list = new ArrayList<>(set);
+    //     int thirdLargest = list.get(list.size() - 3);
+
+    //     System.out.println("3rd Largest without duplicates: " + thirdLargest);
+    }
+}

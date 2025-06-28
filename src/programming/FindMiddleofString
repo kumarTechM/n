@@ -1,0 +1,22 @@
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+        String s="tes";
+        
+        int len=s.length();
+        System.out.println(len);
+        System.out.println(String.valueOf(s.charAt(len/2)));// op will be e
+
+   // another way
+
+String s="test";
+        
+        int len=s.length();
+        System.out.println(len);
+        System.out.println(String.valueOf(s.charAt(len/2))); /// opem will be es
+    }
+}

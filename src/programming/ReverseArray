@@ -1,0 +1,25 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+    int[] original = {1, 2, 3, 4, 5};
+    int [] de=new int[original.length];
+  for (int i = 0; i < original.length; i++) {
+            de[i] = original[original.length - 1 - i];
+        }
+      System.out.println(Arrays.toString(de));   
+       // or another way 
+       List l=new ArrayList();
+       for(int a:original)
+       {
+           l.add(a);
+       }
+       Collections.reverse(l);
+       System.out.println(l);
+    }
+}

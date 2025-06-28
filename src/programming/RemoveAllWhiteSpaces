@@ -1,0 +1,23 @@
+public class Main {
+    public static void main(String[] args) {
+        String input = "  Hello   World \t Java  ";
+        
+        // Remove all kinds of whitespace
+        String noSpaces = input.replaceAll("\\s+", "");
+      or 
+//      String noSpaces = input.replaceAll("\\s ", "");-->it will work 
+        System.out.println("Original: \"" + input + "\"");
+        System.out.println("No spaces: \"" + noSpaces + "\"");
+    }
+}
+o/p"
+Original: "  Hello   World 	 Java  "
+No spaces: "HelloWorldJava"
+
+Explanation:
+\\s → matches any whitespace character (space, tab, newline)
+
++ → means one or more
+
+So \\s+ removes all whitespace in one go
+

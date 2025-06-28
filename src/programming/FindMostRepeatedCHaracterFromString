@@ -1,0 +1,41 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+           String s = "programming";
+           HashMap<Character,Integer>map=new HashMap<Character,Integer>();
+           int maxcount=0;
+           char maxchar=' ';
+           for(char c:s.toCharArray())
+           {
+                if(map.containsKey(c))
+                {
+                    map.put(c,map.get(c)+1);
+                    
+                }
+                else
+                {
+                    map.put(c,1);
+                }
+           }
+            System.out.println(map);
+          // System.out.println(maxcount);
+    Set<Entry<Character,Integer>> value= map.entrySet();
+   for(Entry<Character,Integer>j:value)
+   {
+       if(j.getValue()>maxcount)
+       {
+           maxcount=j.getValue();
+           maxchar=j.getKey();
+       }
+   }
+        System.out.println("maxcount"+maxcount)  ;
+         System.out.println("maxchar"+maxchar)  ;
+           
+    }
+}

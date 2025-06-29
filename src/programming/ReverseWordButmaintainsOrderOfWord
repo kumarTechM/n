@@ -1,0 +1,31 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.util.Map.Entry;
+class Main {
+    
+  
+    public static void main(String[] args) 
+    {
+         String s="abhishek modi";
+         String []sp=s.split(" ");
+         StringBuilder sb=new StringBuilder();
+             StringBuilder sb1=new StringBuilder();
+        //     System.out.println(sp[1]);
+             
+             for(int i=sp[0].length()-1;i>=0;i--)
+             {
+                 sb=sb.append(sp[0].charAt(i));
+             }
+          //   System.out.print(sb);
+               for(int i=sp[1].length()-1;i>=0;i--)
+             {
+                 sb1=sb1.append(sp[1].charAt(i));
+             }
+            //     System.out.println(sb1);
+             
+         System.out.println(sb.toString()+ " "+ sb1.toString());
+     
+    }
+}
+o/p: kehsihba idom

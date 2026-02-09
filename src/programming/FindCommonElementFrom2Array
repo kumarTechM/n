@@ -19,3 +19,20 @@ public class Main {
 }
 //o/p
 Common elements: [80, 20]
+// alternavtive this will work only when you have integer not int as Arrays won;t work with premitive 
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        Integer[] arr1 = {1, 5, 10, 20, 40, 80};
+        Integer[] arr2 = {6, 7, 20, 80, 100};
+        Integer[] arr3 = {3, 4, 15, 20, 30, 70, 80, 120};
+
+        Set<Integer> set = new HashSet<>(Arrays.asList(arr1));
+        set.retainAll(Arrays.asList(arr2));
+        set.retainAll(Arrays.asList(arr3));
+
+        System.out.println(set); // [20, 80]
+    }
+}

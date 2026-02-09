@@ -10,3 +10,21 @@ class Main {
       System.out.println(sb);// SSYAM
     }
 }
+//
+Requirement	Code
+First letter	word.charAt(0)
+Last letter	word.charAt(word.length()-1)
+Nth letter	word.charAt(n)
+// if you want char whos length gretaer or lesser than 2 or 3
+ String s="this is easy java program";
+      String s1[]=s.split(" ");
+      StringBuilder sb=new StringBuilder();
+       for(String word:s1)
+       {
+          if(word.length()>4)
+          {
+              sb.append(word.charAt(word.length()-1));
+          }
+           
+       }
+      System.out.println(sb);//m last letter word whose lenth grater than 4

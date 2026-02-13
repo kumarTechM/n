@@ -24,3 +24,48 @@ class Main {
         System.out.println("Second Smallest: " + secondsmall);//34
     }
 }
+// finding lare ,2 lar,smalll ,and 2 small
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+    
+      List<Integer> li = Arrays.asList(20, 67, 34, 37,90,8);
+      int Largest=Integer.MIN_VALUE;
+      int SecondLargest=Integer.MIN_VALUE;
+      int smallest=Integer.MAX_VALUE;
+      int seocndSmallest=Integer.MAX_VALUE;
+      for(int num:li)
+      {
+          if(num>Largest)
+          {
+              SecondLargest=Largest;
+              Largest=num;
+          }
+          else if(num>SecondLargest && num!=Largest)
+          {
+              SecondLargest=num;
+          }
+          if(num<smallest)
+          {
+              seocndSmallest=smallest;
+              smallest=num;
+          }
+          else if(num<seocndSmallest&& num!=smallest)
+          {
+              seocndSmallest=num;
+          }
+      }
+      System.out.println(Largest);
+       System.out.println(SecondLargest);
+        System.out.println("smallest"+smallest);
+       System.out.println("seocndSmallest"+seocndSmallest);
+      
+    }
+}
+o/p
+90
+67
+smallest8
+seocndSmallest20

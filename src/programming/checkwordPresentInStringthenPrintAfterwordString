@@ -17,3 +17,20 @@ class Main {
            
     } 
 }
+//another way
+     String input = "Automation testing saves time";
+        String target = "testing";
+        String result="";
+         int index=input.indexOf(target);
+        System.out.println(result=input.substring(index));
+//another way
+  public static void main(String[] args) 
+    {
+        String input = "Automation testing saves time";
+        String target = "testing";
+        //String result="";
+    String result = input.replaceFirst(".*" + target, target);
+    System.out.println(result);
+        
+    
+    }

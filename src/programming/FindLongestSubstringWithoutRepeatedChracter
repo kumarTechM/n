@@ -22,6 +22,42 @@ public class LongestSubstringBuiltIn {
             }
         }
 
-        System.out.println("Longest substring without repeating characters: " + longest);//klm
+        System.out.println("Longest substring without repeating characters: " + longest);//jklm
+    }
+}
+
+//another way 
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String s = "aabbecchjjklm";
+        String longest="";
+      
+        for(int i=0;i<s.length();i++)
+        {
+  String temp="";// if you can't mentioned here then it won't print unieq character
+            for(int j=i;j<s.length();j++)
+            {
+                char ch=s.charAt(j);
+                if(temp.contains(ch + ""))// 
+                {
+                   // What happens here?
+                   //ch='a'
+                   //""=empty string
+                   //ch="a" as temp is string will require string to check that's why we addd empty spaces to make char as string
+                 
+ 
+                    break;
+                }
+                temp+=ch;
+                if(temp.length()>longest.length())
+                {
+                    longest=temp;
+                }
+            }
+        }
+     System.out.println(longest);   
     }
 }

@@ -39,3 +39,54 @@ static 	int vowels=0,consonants=0,spaces=0,digit=0;
 	}
 
 }
+o/p
+6
+8
+9
+4
+alternate
+	// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    
+    public static void main(String[] args)
+    {
+      String s="hello i am pravin 921874120";
+       	int vowels=0,consonants=0,spaces=0,digit=0;
+      for(char  c:s.toCharArray())
+      {
+          if(Character.isLetter(c))
+          {
+          if("aieou".indexOf(c)!=-1)
+          {
+              vowels++;
+          }
+          else
+          {
+              consonants++;
+              
+          }
+          }
+          if(Character.isDigit(c))
+          {
+              digit++;
+          }
+          else if(Character.isWhitespace(c))
+          {
+              spaces++;
+          }
+      }
+        
+        
+System.out.println(vowels);
+System.out.println(consonants);
+System.out.println(digit);
+System.out.println(spaces);
+    }
+}
+o/p
+6
+8
+9
+4

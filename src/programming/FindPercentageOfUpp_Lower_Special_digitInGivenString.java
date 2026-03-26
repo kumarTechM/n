@@ -41,3 +41,8 @@ public class FindPercentageOfUpp_Lower_Special_digitInGivenString {
 		System.out.println(specialcount);		
 	}
 }
+o/p
+	6.0
+33.0
+33.0
+26.0

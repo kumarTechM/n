@@ -23,6 +23,11 @@ public class FindingLeapYear
 	            }
 	        }
 	    }
+	o/p
+	1892
+1896
+1904
+1908
 
 
 	}

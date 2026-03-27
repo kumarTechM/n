@@ -27,35 +27,77 @@ public class ReversingStringWithSpecialCharacter {
 // Use this editor to write, compile and run your Java code online
 import java.util.*;
 class Main {
-   
-public static void main(String[] args) 
+    
+    
+    public static void main(String[] args) 
     {
-      
-        String s = "prav@in Sar#kate fr*om L&ona@r";
-        String[] words = s.split(" ");
+           String s="xdfg@hj iop#qwe ui*ty L&ona@r";
+           StringBuffer result=new StringBuffer();
+           StringBuffer word=new StringBuffer();
+           for(char c:s.toCharArray())
+           {
+               if(Character.isLetterOrDigit(c))
+               {
+                   word.append(c);
+               }
+           }
+         word.reverse();
+           int index=0;
+           for(char c:s.toCharArray())
+           {
+               if(Character.isLetterOrDigit(c))
+               {
+                   result.append(word.charAt(index++));
+               }
+               else
+               {
+                   result.append(c);
+               }
+           }
+       System.out.println(result);
+    }
+} 
 
-        for (String word : words) {
+// what if you reverse but order of word should be same then 
+import java.util.*;
+class Main {
+    public static void main(String[] args) 
+    {
+        String s = "xdfg@hj iop#qwe ui*ty L&ona@r";
 
-            // Step 1: remove special characters
-            String clean = word.replaceAll("[^A-Za-z0-9]", "");
+        for(String sp : s.split(" "))
+        {
+            StringBuffer word = new StringBuffer(); // ✅ moved inside loop
 
-            // Step 2: reverse only letters
-            String reversed = new StringBuilder(clean).reverse().toString();
+            // 1. capture letters
+            for(char c : sp.toCharArray())
+            {
+                if(Character.isLetterOrDigit(c))
+                {
+                    word.append(c);
+                }
+            }
 
-            StringBuilder result = new StringBuilder();
+            // 2. reverse letters
+            word.reverse();
+
             int index = 0;
+            StringBuffer result = new StringBuffer(); // also reset per word
 
-            // Step 3: rebuild word
-            for (char c : word.toCharArray()) {
-                if (Character.isLetterOrDigit(c)) {
-                    result.append(reversed.charAt(index++));
-                } else {
-                    result.append(c);  // keep special char same
+            // 3. rebuild word
+            for(char c : sp.toCharArray())
+            {
+                if(Character.isLetterOrDigit(c))
+                {
+                    result.append(word.charAt(index++));
+                }
+                else
+                {
+                    result.append(c);
                 }
             }
 
             System.out.print(result + " ");
         }
-     
     }
 }

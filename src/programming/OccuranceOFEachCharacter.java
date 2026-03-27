@@ -45,3 +45,41 @@ public class OccuranceOFEachCharacter {
 	}
 
 }
+//
+// what if you want o/p like a1b1c2de1jklm1n1 rmeoing diuplicate frequency 
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String s="aabbcccdeejklmmnn";
+        //a1b1c2de1jklm1n1
+        HashMap<Character,Integer>map=new HashMap<Character,Integer>();
+        for(char c:s.toCharArray())
+        {
+            if(map.containsKey(c))
+            {
+                map.put(c,map.get(c)+1);
+            }
+            else
+            {
+                map.put(c,1);
+            }
+        }
+        System.out.println(map);
+        Set<Map.Entry<Character,Integer>>jk=map.entrySet();
+        StringBuffer sb=new StringBuffer();
+        for(Map.Entry<Character,Integer>k:jk)
+        {
+           int count=k.getValue()-1;// reduce count
+           sb.append(k.getKey());
+           if(count>0)
+           {
+               sb.append(count);
+           }
+           
+            
+        }
+        System.out.println(sb);
+    }
+}

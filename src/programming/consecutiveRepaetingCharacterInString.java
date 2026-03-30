@@ -48,3 +48,35 @@ public class consecutiveRepaetingCharacterInString {
 
         System.out.println(result.toString());  // Output: a3b3v3
 }
+if you want to exclude first letter then 
+	import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        String s = "aaabbbccvvvggghklmnjjj";
+
+        Map<Character, Integer> map = new LinkedHashMap<>();
+
+        // Step 1: count frequency (same as yours, but cleaner)
+        for(char c : s.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+
+        System.out.println(map);
+
+        // Step 2: build result
+        StringBuilder sb = new StringBuilder();
+
+        for(Map.Entry<Character, Integer> k : map.entrySet()) {
+
+            if(k.getValue() > 1) {
+                sb.append(k.getKey()).append(k.getValue() - 1); // 🔥 main change
+            } else {
+                sb.append(k.getKey()); // single char
+            }
+        }
+
+        System.out.println(sb);o/p a2b2c1v2g2hklmnj2
+    }
+}

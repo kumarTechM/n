@@ -29,8 +29,8 @@ class Main {
         String input = "Automation testing saves time";
         String target = "testing";
         //String result="";
-    String result = input.replaceFirst(".*" + target, target);
-    System.out.println(result);
+  String result = input.replaceFirst(".*" + target + "\\s*", "");
+System.out.println(result);
         
     
     }

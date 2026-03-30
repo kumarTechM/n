@@ -23,6 +23,13 @@ public class Swapping_String {
 		s=s.substring(5, 10);
 		System.out.println(s1);
 		System.out.println(s);
+		// another way 
+	   s=s+s1;//helloworld
+	   s1=s.substring(0,s1.length());
+	   System.out.println(s1);
+	   
+	    s=s.substring(s1.length());
+	   System.out.println(s);
 
 	}
 

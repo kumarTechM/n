@@ -13,10 +13,24 @@ class Main {
 
    // another way
 
-String s="test";
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+//FindLongestSubstringWithoutRepeatedChracter
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+            String s="test";
+            int len=s.length();
+            
+      if (s.length() % 2 == 0) {
+    System.out.println("Middle characters: " +
+            s.charAt(s.length() / 2 - 1) +
+            s.charAt(s.length() / 2));
+} else {
+    System.out.println("Middle character: " +
+            s.charAt(s.length() / 2));
+}
+}
         
-        int len=s.length();
-        System.out.println(len);
-        System.out.println(String.valueOf(s.charAt(len/2))); /// opem will be es
-    }
 }

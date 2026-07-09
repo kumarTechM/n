@@ -6,7 +6,7 @@ public class OccuranceOFEachCharacter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s="pravinpravin";
+		String s="aabbssxxii";
 		HashMap<Character,Integer> map= new HashMap<Character,Integer>();
 		char[] ch=s.toCharArray();
 		for (char c : ch) {

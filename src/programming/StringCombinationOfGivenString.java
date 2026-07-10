@@ -22,3 +22,27 @@ public class StringCombinationOfGivenString {
 	        }
 	    }
 }
+// alternate way 
+public class Main {
+
+    static void combination(String s, String ans, int index) {
+
+        if (index == s.length()) {
+            if (!ans.isEmpty()) {
+                System.out.println(ans);
+            }
+            return;
+        }
+
+        // Include current character
+        combination(s, ans + s.charAt(index), index + 1);
+
+        // Exclude current character
+        combination(s, ans, index + 1);
+    }
+
+    public static void main(String[] args) {
+        String s = "ABC";
+        combination(s, "", 0);
+    }
+}

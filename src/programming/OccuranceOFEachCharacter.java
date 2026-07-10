@@ -80,6 +80,11 @@ class Main {
            
             
         }
+		// insted of above loop use below loop
+		 for(Map.Entry<Character,Integer>k:jk)
+     {
+          sb.append(k.getKey()).append(k.getValue()-1);
+     }
         System.out.println(sb);
     }
 }

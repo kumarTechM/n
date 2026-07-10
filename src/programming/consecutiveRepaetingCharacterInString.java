@@ -76,6 +76,11 @@ class Main {
                 sb.append(k.getKey()); // single char
             }
         }
+		or // use below loop
+			 for(Map.Entry<Character,Integer>k:jk)
+     {
+          sb.append(k.getKey()).append(k.getValue()-1);
+     }
 
         System.out.println(sb);o/p a2b2c1v2g2hklmnj2
     }

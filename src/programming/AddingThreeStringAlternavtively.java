@@ -59,3 +59,17 @@ public class AddingThreeStringAlternavtively {
 	System.out.println(sb);
 		
       }
+
+// all string have same length then 
+	String a="1 2 4";
+		String b="M N L";
+		String c="x y z";
+		StringBuffer sb=new StringBuffer();
+	  for(int i=0;i<a.length();i++)
+	  {
+	      sb.append(a.charAt(i));
+	      sb.append(b.charAt(i));
+	      sb.append(c.charAt(i));
+	  }
+ System.out.println(sb);
+    }

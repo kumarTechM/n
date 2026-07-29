@@ -23,4 +23,12 @@ public class HowToGetAdditionofDigitinString {
 	}
 
 }
+// another way 
+	for(char c:ws.toCharArray())
+        	{
+        	    if(Character.isDigit(c))
+        	    {
+        	        sum=sum+Character.getNumericValue(c);
+        	    }
+        	}
 

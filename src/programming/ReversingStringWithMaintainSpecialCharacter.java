@@ -63,7 +63,7 @@ import java.util.*;
 class Main {
     public static void main(String[] args) 
     {
-        String s = "xdfg@hj iop#qwe ui*ty L&ona@r";
+        String s = "xdfg@hj iop#qwe ui*ty L&ona@r"; // jhgf@dx ewq#poi yt*iu r&an@oL
 
         for(String sp : s.split(" "))
         {

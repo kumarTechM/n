@@ -1,0 +1,288 @@
+const { expect, test, chromium, firefox } = require("@playwright/test")
+const path = require('path');
+const { exitCode } = require("process");
+test.describe.parallel('checking ',()=>{});
+
+// all tests
+
+
+
+test(" @smoke launching brower", async () => {
+  const browser = await chromium.launch();
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.goto("https://the-internet.herokuapp.com/javascript_alerts");
+  await page.waitForLoadState();
+  console.log(await page.title())
+  console.log(page.url())
+
+  await page.close();
+  await context.close();
+ 
+})
+test(" @sanity capturing screenhot and perticular element screenshot", async () => {
+  const browser = await chromium.launch();
+  const conext = await browser.newContext();
+  const page = await conext.newPage();
+  await page.goto("https://www.google.com");
+  await page.waitForLoadState();
+  await page.pause()
+  await page.screenshot({ path: "./screenshots/goole.png", fullPage: false });
+  const ele = page.getByLabel('Search', { exact: true })
+  await ele.waitFor({ state: 'visible' })
+  await ele.waitFor({ state: 'attached' })
+  await ele.scrollIntoViewIfNeeded();
+  await ele.screenshot({ path: "screenshots/element.png" ,fullPage: true});
+  await ele.click()
+  console.log("element is present: ", await ele.isVisible())
+  await page.locator("").screenshot({ path: "screenshots/element.png", fullPage: true });
+})
+test("@smoke handling alerts", async () => {
+
+  const brower = await chromium.launch();
+  const context = await brower.newContext();
+  const page = await context.newPage();
+  await page.goto("https://the-internet.herokuapp.com/javascript_alerts");
+  await page.waitForLoadState()
+  let nextAction='accept' // 'accept' or 'dismiss'
+  page.on("dialog", async (dialog) => {
+    console.log("Dialog type: ",  dialog.type())
+    console.log("Dialog message: ", dialog.message())
+    await dialog.accept("hello");
+
+    
+  })
+  await page.locator("text='Click for JS Prompt'").click()// this will trgger the dialog/alert
+  console.log("entere text in prompt is "+await page.locator("#result").textContent())
+
+ 
+})
+test("handling windowa",async()=>{
+
+     const browser=await chromium.launch();
+     const context=await browser.newContext();
+     const page=await context.newPage()
+     await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
+     await page.pause()
+     await page.waitForLoadState();
+      const [popup]=  await Promise.all([
+         context.waitForEvent('page'),
+         page.locator("#openwindow").click()
+        ]);
+        await popup.waitForLoadState('domcontentloaded');
+        console.log("title of new page is "+await popup.title())
+        console.log("url of new page is "+ popup.url())
+    
+
+})
+test("multiple window handling",async()=>
+{
+    const browser = await chromium.launch({ headless: false });
+
+    // Create browser context
+    const context = await browser.newContext();
+
+    // Open parent page
+    const page = await context.newPage();
+
+    await page.goto('https://the-internet.herokuapp.com/windows');
+
+    console.log('Parent Window Title:', await page.title());
+
+    // Click link that opens a new window
+    const [childPage] = await Promise.all([
+        context.waitForEvent('page'),
+        page.locator('text=Click Here').click()
+    ]);
+
+    // Wait for child page to load
+    await childPage.waitForLoadState();
+
+    console.log('Child Window Title:', await childPage.title());
+      // Get all open pages/windows
+    const pages = context.pages();
+
+    console.log('Total Windows Opened:', pages.length);
+
+    // Iterate through all windows
+    for (const currentPage of pages) {
+
+        await currentPage.waitForLoadState();
+
+        const title = await currentPage.title();
+        console.log('Window Title:', title);
+
+        // Perform action on specific window
+        if (title === 'New Window') {
+
+            await currentPage.bringToFront();//brings the specified tab/window to the foreground (makes it the active tab) in the browser.
+// if you haven;t mentioned above line still it will work 
+            const text = await currentPage.locator('h3').textContent();
+
+            console.log('Text in Child Window:', text);
+
+            expect(text).toBe('New Window');
+        }
+    }
+
+    // Close child window
+    await childPage.close();
+
+    // Switch back to parent window
+    await page.bringToFront();
+
+    console.log('Back to Parent Window:', await page.title());
+      // Validate parent page
+    await expect(page.locator('h3')).toHaveText('Opening a new window');
+
+    // Close browser
+    await browser.close();
+
+})
+
+test("handling window using page reference",async({page,context})=>{
+
+    await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
+    await page.waitForLoadState();
+    await page.pause()
+   const ele= page.locator("#openwindow")
+  const [newpage]= await Promise.all([
+    context.waitForEvent('page'),
+     ele.click()// no await inside promise
+   ]);
+ 
+
+    // const [multiPage] = await Promise.all([
+    //     page.waitForEvent("popup"),// someties page or popup will work
+    //     page.click("#opentab")
+    // ])
+   // await multiPage.waitForLoadState();
+   console.log("title of new page is "+await newpage.title())
+   console.log("url of new page is "+ newpage.url())
+   await newpage.locator("text='Access all our Courses'").waitFor({state:'visible'})
+   await newpage.locator("text='Access all our Courses'").click()
+    console.log("2 title of new page is "+await newpage.title())
+   
+
+})
+test("handling frames",async({page})=>{
+  await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
+    await page.waitForLoadState();
+    await page.pause()
+  //1 using frameLocator()
+  const frame = page.frameLocator("#frameId");
+
+await frame.locator("#input").fill("text");
+await frame.locator("#submit").click();
+//2 Using page.frame()
+const frameo = page.frame({ name: "frameName" });
+
+await frameo.fill("#input", "text");
+
+//3. Using contentFrame() (older way)
+ await page.locator("#frameId").contentFrame().locator("  #input").fill("text");
+ //page.frame() may return null if the frame is not found, so it's safer to use frameLocator() which auto-waits and is more reliable.
+   
+})
+test("scrolling in pw",async ()=>{
+   const browser=await chromium.launch();
+   const context=await browser.newContext()
+   const page=await context.newPage();
+   await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+   await page.pause()
+   // scorlling to a particular element
+   await page.locator("#gf-BIG li").filter({hasText:'REST API'}).scrollIntoViewIfNeeded()
+    // scrolling to the bottom of the page using javascript 
+    await page.evaluate(()=>window.scrollTo(0,document.body.scrollHeight))
+    //multiple scrolling to the bottom and top of the page
+    await page.evaluate(() => {
+      window.scrollTo(0,document.body.scrollHeight);
+      window.scrollTo(0,0);
+    })
+    // scrolling using page.keyboard
+    await page.keyboard.press('PageDown');
+    await page.keyboard.press('PageUp');
+    // using arrow keys to scroll
+    await page.keyboard.press('ArrowDown'); // scroll down  
+    await page.keyboard.press('ArrowUp'); // scroll up
+    // scrolling using page.mouse
+    await page.mouse.wheel(0, 1000); // scroll down
+    await page.mouse.wheel(0, -1000); // scroll up  
+    
+    await page.keyboard
+
+})
+test("file upload with input[type='file'] ", async ({ page }) => {
+  await page.goto("https://the-internet.herokuapp.com/upload");
+  await page.waitForLoadState();
+  const filePath = 'c:/Users/v-psarkate/Desktop/Test.txt'; // replace with your file path
+  const inputFile = page.locator('#file-upload');
+  await inputFile.setInputFiles(filePath);
+  await page.locator("#file-submit").click();
+  console.log(await page.locator("#uploaded-files").textContent());
+})
+test("file upload with file chooser",async()=>{
+    const browser=await chromium.launch();
+    const context=await browser.newContext();
+    const page=await context.newPage();
+    await page.goto("https://the-internet.herokuapp.com/upload");
+    await page.wairForLoadState();
+   const[fileupload]= await Promise.all([
+      page.waitForEvent('filechooser'),
+      page.locator("#file-upload").click() // locator for the file input
+
+    ]);
+     const  filepath=path.resolve("");
+    await fileupload.setFiles("./UploadFile/Test.txt"); // path to the file you want to upload
+    // for multiple file upload
+     await fileupload.setFiles(["./UploadFile/Test1.txt","./UploadFile/Test2.txt"])
+})
+test("file download  with given folder structure ", async ({ page }) => {
+  await page.goto("https://the-internet.herokuapp.com/download");
+  await page.waitForLoadState();
+  //start waiting for download
+const [download]=  await Promise.all([
+    page.waitForEvent('download'),
+    page.locator("text='Parameters.java'").first().click()// locator for the download link
+  ])
+  //save the downloaded file to a specific path
+const downlaodpath=  path.resolve(__dirname,  "../DownloadFile/Parameters.java")
+console.log("downloaded file path is "+downlaodpath)
+  //save the file to the specified path
+await download.saveAs(downlaodpath);  
+   // await download.saveAs("./Downloads/Parameters.java");
+})
+test("handling dropdwon with select tag ", async ({ page }) => {
+  await page.goto("https://the-internet.herokuapp.com/dropdown");
+  await page.waitForLoadState();
+ // new way
+ await page.locator("#dropdown").selectOption({ label: "Option 2" });
+ await page.locator("#dropdown").selectOption(['red','blue'])// for multiple select dropdown;
+ await page.locator("#dropdown").selectOption({label:'red'},{label:'blue'})// for multiple select dropdown;
+ await page.locator("select").selectOption({index: 2});// index
+ await page.locator("select").selectOption([{index: '1'},{index:'3'}]);// multiple indesx
+
+})
+test("mouse over  ", async ({ page }) => {
+  await page.goto("https://rahulshettyacademy.com/AutomationPractice/");
+  await page.waitForLoadState();
+    const ele=page.locator("#mousehover");
+    await ele.scrollIntoViewIfNeeded();
+    await ele.hover();
+    await page.locator(".mouse-hover-content").waitFor({state:'visible'})
+    console.log("mouse over element is visible: ", await page.locator(".mouse-hover-content a").count())
+    console.log("mouse over element is visible: ", (await page.locator(".mouse-hover-content a").allTextContents()))
+
+})
+test("drag and drop ", async ({ page }) => {
+  await page.goto("https://the-internet.herokuapp.com/drag_and_drop");
+  await page.waitForLoadState();
+  const source = page.locator("#column-a");
+  const target = page.locator("#column-b");
+//await page.dragAndDrop(source, target);
+ await page.dragAndDrop("#column-a","#column-b")
+  
+
+})
+
+   

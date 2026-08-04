@@ -132,6 +132,40 @@ How do you ensure maintainability and scalability of your test framework?
 12- In a try block with multiple catch blocks (ArithmeticException, NullPointerException, StaleElementReferenceException, and Exception), if a StaleElementReferenceException is thrown, which catch block will execute? Why? If a NoSuchElementException is thrown, which catch block will execute?
 13- Write a Java program to reverse the words in a sentence (not the characters).
 
+===============================================================================
+WAP to find last non repeating character from a string 
+Q2) WAP to find the count of each character of a string.
+Q3) Selenium 3 vs Selenium 4 
+Q4) Difference between page object vs Page factory 
+Q5) Collection vs Collections difference
+Q6) How long is your sprint ?
+Q7) How you will handle elements which are inside shadow dom
+Q8) Tell me how HashMap works internally.
+ 
+📍 Round 2 : ( 1 hour ) From Sapient Office
 
+I was expecting it will be face to face , but again it was virtual interviewer was sitting in different city , only thing is HR will provide his laptop and from there you need to join on teams. 1 hour round , asked from api , java , selenium ✅
+
+Q1 : Suppose a website is not ready then how you will do testing , how you will collaborate with team.
+Q2 : How you will resolve conflict in your team ( can anyone answer what is best way in comments ) 
+Q3 : How you will put validation in rest assured write code
+Q4 : Bug life cycle explain
+Q5 : Explain difference between severity and priority for a defect
+Q6 : What is most challenging thing you faced while designing framework ?
+Q7) What is functional interface ? 
+Q8) What is Comparable and Comparator in Java ?
+Q9) What is multi threading in Java ?
+Q10) How will you throw custom exception in java ? 
+Q11) Difference between Request Specification and Response Specification.
+
+
+( Interviewer was a good person he was trying to add on to the answers which I gave , learned a lot from him ) 😇
+
+📍 Round 3: 
+Behavioural Round ( virtual )
+, here you just need to be confident like she asked me why you want to join sapient ? what are its core values ? 
+
+📍 Round 4 : HR 
+( salary discussion and notice )
 
 LonarSarkate75689/W2299Prashu!97

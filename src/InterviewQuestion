@@ -1,0 +1,137 @@
+Cognizant | QA Automation
+
+First round :
+1. In an array print the second smallest and second largest element 
+
+Second Round :
+1. Introduce yourself 
+2. What are your current roles and responsibilities 
+3. Which oops concepts you have implemented -->encapsulation ,abstrction,poly inheritance 
+4. How have you implemented abstraction and encapsulation 
+5. Explain the exception hierarchy 
+6. How have you handled null pointer exception 
+7. What is compile time and run time polymorphism? How have you implemented them?
+8. Can you create an object of an interface?
+9. Can you call a method from an interface that you have not implemented in any class?
+10. Can you overload and override static methods 
+11. What is the difference between stringbuilder and stringbuffer
+12. What is the difference between array list and Linked list
+13. What is map
+14. What is set and how is it different from list and map
+15. How do you define singleton class? What is it's use
+16. Write xpath for the search button on Google 
+17. Write selenium code to enter text
+18. How do you scroll to an element?
+19. How to take screenshot of a web element?
+20. What are the activities we can perform using javascriptExecutor 
+21. How do you switch to frame? How to detect frames
+22. How to get all the available values in select drop-down?
+23. How to handle alerts ?
+24. How to switch to child window?
+25. What are the options available in cucumber options 
+26. How can I run a scenario multiple times 
+27. How can I run certain activities for all scenarios multiple times 
+28. How have you handled synchronisation 
+29. How do you execute your test cases in your framework 
+30. How to re execute failed tests
+31. What is the use of test runner in cucumber 
+32. How do you perform cross browser testing 
+
+Third Round :
+1. What are your current role and responsibilities 
+2. Can you work as an individual contributor 
+3. How do you resolve conflicts in Git
+4. Given an array {1,3,3,4,5,6,6,7,8,9,9} when user enters a search element, the program should display the index number where the element is found. If the element is repeated it should display all those indices. If it is not present in the given array program should display "element not found"
+5. Discussion of project specific details
+
+
+++++++++++++++=================================================
+) Explain the architecture of your Playwright Automation Framework.
+2) Why did you choose Playwright over Selenium?
+3) What design patterns have you implemented in your Playwright framework?
+4) How do you handle test data in your automation framework?
+5) How do you manage multiple environments (Dev, QA, UAT, Production)?
+6) How have you implemented the Page Object Model (POM) in your framework?
+7) How do you capture screenshots, videos, and traces on test failures?
+8) Which reporting tools have you integrated into your Playwright framework?
+9) How do you execute Playwright tests in parallel across multiple browsers?
+10) How do you handle authentication and session management in Playwright?
+11) How do you identify and handle flaky tests in your automation framework?
+12) How is your Playwright framework folder structure organised?
+13) How have you integrated your Playwright framework with Jenkins, Azure DevOps, or GitHub Actions?
+14) How do you combine API and UI automation testing within the same Playwright framework?
+15) If you were asked to improve or redesign your current Playwright automation framework, what changes would you make and why?
+
+++++++++++++=======================================================
+ Introduce yourself and walk through your professional background.
+2. Describe the automation framework you've worked with on your project.
+3. How would you go about adding new fields to the object repository?
+4. Walk through the structure of your automation framework with an example.
+5. What's the difference between a single slash (/) and a double slash (//) in XPath?
+6. List the various TestNG annotations and explain the order in which they execute.
+7. What role does Jenkins play in automation testing?
+8. How do you handle pop-up alerts in Selenium?
+9. How do you deal with file upload (browse) buttons in Selenium?
+10. Explain polymorphism and how it's used within Selenium.
+11. What is method overloading, and when would you apply it in a Selenium context?
+
+Round 2 – Client Interview Round
+
+1. Describe your current project and its key components.
+2. Which automation framework does your project use? Give specifics.
+3. Define the Page Object Model (POM) and 4m explain why an object repository is used with it.
+4. What is the purpose of the Robot class in Selenium?
+5. Why is Page Factory used for managing object repositories?
+6. How do you launch Internet Explorer using Selenium WebDriver?
+7. How is the Select class used to handle dropdowns in Selenium?
+8. How do you handle frames in Selenium, and what are the different ways to pass values into them?
+9. Explain how XPath is used with sibling elements.
+10. What distinguishes implicit wait from explicit wait in Selenium? Include the syntax.
+11. Write a sample program to capture a screenshot in Selenium.
+
++==================================================================
+Automation Testing & Framework:
+Explain the automation framework you’ve built or worked on.
+Why did you choose a particular framework (like Hybrid, BDD, POM)?
+How do you handle dynamic elements or flaky tests in Selenium?
+What’s your approach to integrating automation in a CI/CD pipeline?
+How do you manage test data in automation?
+2. Coding (Java-based):
+Write a function to reverse a string without using built-in methods.
+Find the second highest number in an array.
+Check if a string is a palindrome.
+Find duplicates in an array and count their occurrences.
+Logic to remove special characters from a string.
+3. Manual Testing Concepts:
+Difference between severity and priority with real-world examples.
+How do you write effective test cases?
+What is the difference between sanity and smoke testing?
+How do you report bugs and track them in your current workflow?
+4. API Testing:
+How do you test REST APIs manually and through automation?
+Which tools have you used (e.g., Postman, RestAssured)?
+How do you validate response payloads, headers, and status codes?
+When to use PUT vs PATCH?
+5. Framework & Design-Based Questions:
+Explain Page Object Model (POM) and why it’s used.
+Difference between BDD vs TDD.
+How do you structure your test automation project?
+How do you ensure maintainability and scalability of your test framework?
++++++++++++==============================================================
+ Self Introduction.
+2- What is an Interface, and how does it work?
+3- What is an Abstract Class?
+4- I have Method 1, which is an abstract method, and Method 2, which is a non-abstract method. If I don't declare the class with the abstract keyword, will it work? Why?
+5- Can an abstract class contain both abstract and non-abstract methods? What happens if an abstract class is not declared with the abstract keyword? Will it work? Why?
+6- Suppose I have an interface and declare it as abstract. Will there be any issue? Also, if I declare Method1, Method2, and Method3 with the abstract keyword inside the interface, will it work?
+7- If an interface has abstract methods A, B, and C, and Method D has a method body, will it work? Where will the implementation of A, B, and C be provided?
+8- What is the difference between driver.close() and driver.quit()?
+9- You have 10 browser windows open, and you are currently on the last window. How would you close all the other windows while keeping the current window open?
+10- What is the difference between getWindowHandle() and getWindowHandles()?
+11- Explain the use of getWindowHandle() and getWindowHandles().
+12- In a try block with multiple catch blocks (ArithmeticException, NullPointerException, StaleElementReferenceException, and Exception), if a StaleElementReferenceException is thrown, which catch block will execute? Why? If a NoSuchElementException is thrown, which catch block will execute?
+13- Write a Java program to reverse the words in a sentence (not the characters).
+
+
+
+LonarSarkate75689/W2299Prashu!97

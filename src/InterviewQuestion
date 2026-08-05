@@ -232,4 +232,40 @@ What are the differences between `findElement()` and `findElements()`?
 3. Describe a challenging situation with developers or deadlines and how you handled it.
 4. Why do you want to join Barclays?
 5. Where do you see yourself in the next 2–3 years?
+=======================================================================
+ntroduction / Tell me about yourself
+ 2️⃣ How do you capture network requests & responses in Playwright?
+ 3️⃣ How can you mock API responses using Playwright?
+ 4️⃣ How do you take screenshots & videos in Playwright?
+ 5️⃣ How do you handle authentication in Playwright?
+ → Basic Auth
+ → Token-based Authentication
+ → OAuth
+ 6️⃣ How do you configure retries/test retries in Playwright?
+🔥 ROUND 2 — Advanced Playwright | 30–45 Mins
+1️⃣ What strategies do you use to debug flaky Playwright tests?
+ 2️⃣ How do you optimize test execution speed?
+ 3️⃣ How do you handle dynamic elements?
+ 4️⃣ locator() vs page.$() — what's the difference?
+ 5️⃣ How do you use Trace Viewer for debugging?
+ 6️⃣ Share a scenario where Playwright is better than Selenium.
+ 7️⃣ How do you implement Page Object Model (POM) in Playwright?
+ 8️⃣ How do you manage test data?
+ 9️⃣ Explain Playwright's parallel execution capabilities.
+ 🔟 Difference between Browser, BrowserContext & Page?
+ 1️⃣1️⃣ How do you launch browsers in headless vs headed mode?
+ 1️⃣2️⃣ What are Playwright Fixtures and why are they useful?
+ 1️⃣3️⃣ How do you handle:
+ → Dropdowns
+ → Frames/iFrames
+ → Alerts/Dialog boxes
+ 1️⃣4️⃣ How does Playwright handle waits differently from Selenium?
+A good Playwright framework should avoid unnecessary hard waits and use locators, assertions, POM, reusable components, and business-focused validations.
+💻 ROUND 3 — Java Coding + Managerial
+Coding Questions:
+1️⃣ Count and print the number of vowels and consonants in your name.
+ 2️⃣ Find unique & duplicate characters in your name WITHOUT using Collections in Java.
+ 3️⃣ Find the Longest Substring in a given String.
+Managerial Scenario:
+4️⃣ The deadline is near. How would you distribute tasks among your teammates?
 LonarSarkate75689/W2299Prashu!97

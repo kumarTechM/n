@@ -167,5 +167,36 @@ Behavioural Round ( virtual )
 
 📍 Round 4 : HR 
 ( salary discussion and notice )
+================================================================================
 
+1) Introduction and 
+How do you capture network requests and responses in Playwright?
+2) How can you mock API responses using Playwright?
+3) How do you take screenshots and videos in Playwright?
+4) How do you handle authentication in Playwright (Basic Auth, Token-based, OAuth)?
+5) How do you configure retries and test retries in Playwright?
+
+Round # 2 ( 30-45 Mins ) : 
+
+1) What strategies do you use to debug flaky Playwright tests?
+2) How do you optimize execution speed in Playwright?
+3) How do you handle dynamic elements in Playwright?
+4) What is the difference between locator and page.$ methods?
+5) How do you use trace viewer in Playwright for debugging?
+6) Share a scenario where Playwright is a better choice than Selenium.
+7) How do you implement Page Object Model (POM) in Playwright?
+8) How do you manage test data in Playwright?
+9) What are Playwright’s parallel execution capabilities?
+10) What is the difference between page, browser, and context in Playwright?
+11) How do you launch a browser in headless and non-headless modes?
+12) What are Playwright fixtures, and how are they useful?
+13) How do you handle dropdowns, frames, and alerts in Playwright?
+14) How does Playwright handle waits differently compared to Selenium?
+
+Round # 3 ( Coding + Managerial ) : 
+
+1) Count and print number of Consonants and  in your name 
+2) Unique and Duplicates in your name without using Collections in Java 
+3) Longest Substring 
+4) How do you distribute the tasks to team mates when deadline in near 
 LonarSarkate75689/W2299Prashu!97
